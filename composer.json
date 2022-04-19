@@ -1,0 +1,54 @@
+{
+    "name": "weboccult/eatcard-aide",
+    "description": "This provides common features to all sub systems of eatcard.",
+    "keywords": [
+        "weboccult",
+        "eatcard-aide"
+    ],
+    "homepage": "https://github.com/weboccult/eatcard-aide",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Darshit Hedpara",
+            "email": "darshithedpara@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0 || ^9.0"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Weboccult\\EatcardAide\\": "src"
+        },
+       "files": [
+         "src/Helpers/aide.php"
+       ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Weboccult\\EatcardAide\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Weboccult\\EatcardAide\\EatcardAideServiceProvider"
+            ],
+            "aliases": {
+                "EatcardAide": "Weboccult\\EatcardAide\\EatcardAideFacade"
+            }
+        }
+    }
+}
